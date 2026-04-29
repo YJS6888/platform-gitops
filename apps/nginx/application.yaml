@@ -1,23 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: aws-load-balancer-controller
+  name: nginx
   namespace: argocd
 spec:
   project: default
 
   source:
-    repoURL: https://aws.github.io/eks-charts
-    chart: aws-load-balancer-controller
-    targetRevision: 3.2.2
-
-    helm:
-      valueFiles:
-        - values.yaml
+    repoURL: https://github.com/YJS6888/platform-gitops.git
+    targetRevision: main
+    path: apps/nginx/manifests
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: kube-system
+    namespace: default
 
   syncPolicy:
     automated:
