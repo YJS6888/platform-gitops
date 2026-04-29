@@ -1,1 +1,7 @@
+clusterName: yjs-cluster
+region: ap-northeast-2
+vpcId: vpc-00b70b382cae0069d
 
+serviceAccount:
+  create: false
+  name: aws-load-balancer-controller
