@@ -1,0 +1,12 @@
+cd ~/platform-gitops
+
+git pull origin main     # ⭐ 최신 상태 먼저 가져옴
+vi apps/argocd/values.yaml
+git add .
+git commit -m "update argocd config"
+git push origin main
+
+
+## 병합 ##
+git pull origin main
+## git hub 최신상태 내 로컬로 가져옴과 동시에 자동병합 
