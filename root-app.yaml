@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/YJS6888/platform-gitops.git
     targetRevision: main
-    path: apps
+    path: apps/nginx
 
   destination:
     server: https://kubernetes.default.svc
